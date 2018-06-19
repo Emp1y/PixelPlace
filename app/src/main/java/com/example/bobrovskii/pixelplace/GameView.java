@@ -3,6 +3,7 @@ package com.example.bobrovskii.pixelplace;
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
@@ -83,7 +84,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback, Vie
         super.draw(canvas);
         if (canvas!=null)
         {
+            canvas.drawColor(Color.WHITE);  //цвет фона поля
             characterSprite.draw(canvas);
+
         }
     }
 

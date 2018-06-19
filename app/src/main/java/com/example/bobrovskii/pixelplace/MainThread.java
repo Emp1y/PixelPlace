@@ -1,6 +1,7 @@
 package com.example.bobrovskii.pixelplace;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.view.SurfaceHolder;
 
 public class MainThread extends Thread {
@@ -24,7 +25,8 @@ public class MainThread extends Thread {
     {
         while(running)
         {
-            canvas =null;
+            canvas = null;
+
 
             try {
                 canvas = this.surfaceHolder.lockCanvas();
@@ -32,6 +34,8 @@ public class MainThread extends Thread {
                 {
                     this.gameView.update();
                     this.gameView.draw(canvas);
+
+
                 }
             } catch (Exception e){}
                 finally
